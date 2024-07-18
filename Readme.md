@@ -13,6 +13,8 @@ Initramsfs neu baue
 ```
 apt install dracut
 apt install fido2-tools
+```
+```
 sudo tee /etc/dracut.conf.d/11-fido2.conf <<EOF
 ## Spaces in the quotes are critical.
 # install_optional_items+=" /usr/lib/x86_64-linux-gnu/libfido2.so.* "
