@@ -11,8 +11,8 @@ nvme0n1p5_crypt UUID=406f3f48-xxx none luks,discard,fido2-device=auto
 
 Initramsfs neu baue
 ```
-apt install dracut
-apt install fido2-tools
+apt update
+apt install dracut fido2-tools
 ```
 ```
 sudo tee /etc/dracut.conf.d/11-fido2.conf <<EOF
