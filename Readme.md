@@ -15,7 +15,7 @@ systemd-cryptenroll -fido2-device=list
 
 # Enroll your FIDO2 device to unlock Luks volume
 ```
-systemd-cryptenroll -fido2-device=auto /dev/vda5
+systemd-cryptenroll --fido2-device=auto $(blkid -t TYPE=crypto_LUKS | awk '{ if(NR==1) { gsub("\:",""); print $1 } }')
 ```
 
 # Edit /etc/crypttab
