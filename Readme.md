@@ -1,6 +1,6 @@
 Yubikey mit LUKS verheirate
 ```
-systemd-cryptenroll /dev/nvme0n1p5 --fido2-device=auto --fido2-with-client-pin=yes
+systemd-cryptenroll /dev/nvme0n1p3 --fido2-device=auto --fido2-with-client-pin=yes
 ```
 
 Uffmache bei Boot konifguriere
