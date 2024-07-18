@@ -8,6 +8,16 @@ dracut -f
 reboot
 ```
 
+# Check your FIDO2 device is listed
+```
+systemd-cryptenroll -fido2-device=list
+```
+
+# Enroll your FIDO2 device to unlock Luks volume
+```
+systemd-cryptenroll -fido2-device=auto /dev/vda5
+```
+
 # Edit /etc/crypttab
 ```
 # Change the line:
@@ -20,17 +30,6 @@ reboot
 ```
 dracut -f
 ```
-
-# Check your FIDO2 device is listed
-```
-systemd-cryptenroll -fido2-device=list
-```
-
-# Enroll your FIDO2 device to unlock Luks volume
-```
-systemd-cryptenroll -fido2-device=auto /dev/vda5
-```
-
 # Test if everything works as expected ! 😀
 ```
 reboot
